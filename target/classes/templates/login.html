@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>ログイン | 東商店</title>
+</head>
+<body>
+
+	<h2>ログイン</h2>
+	<form method="post" th:action="@{/login}" th:object="${loginForm}">
+	<table class="login_form">
+		<tbody>
+
+			<tr>
+				<th class="label">メールアドレス</th>
+				<td class="input"><input type="text" th:field="*{email}" /></td>
+			</tr>
+			<tr>
+				<th class="label">パスワード</th>
+				<td class="input"><input type="password" th:field="*{password}" /></td>
+			</tr>
+			<tr>
+				<th class="label"></th>
+				<td class="input"><input type="submit" value="ログイン" /></td>
+			</tr>
+		</tbody>
+	</table>
+	</form>
+
+
+</body>
+</html>
